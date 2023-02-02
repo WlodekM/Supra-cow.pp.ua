@@ -68,7 +68,8 @@ section {
 
 body {
 background-image: url(https://wlodekm.github.io/triangle-zh-tri-stuff-dev/assets/img/tile.png);
-background-size: cover;
+background-size: cover !important;  
+background-repeat: no-repeat !important;
   
 }
 
