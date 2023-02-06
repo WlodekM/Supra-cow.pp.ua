@@ -104,17 +104,18 @@ h2 {
   </li>
 </ul>
 -->
+
 </header>
 </body>-
 
 <div id="all" class="all">
 <div id="home" class="home">
-  <h2>Aieou cow: the beginning of supra</h2>
+  <h2>Aieou cow (supra cow 1)</h2>
     
     <div class="img1">Image here</div>
     
     <iframe src="../supra cow 2 - tools mod.html" width="640" height="360" title="scratch"></iframe>
-    <p>huh?</p>
+    <p id="huh">huh?</p>
 <div class="row">
     <div class="column side">
         <h1>Authors</h1>
@@ -140,3 +141,10 @@ h2 {
 <br><br><br><br>
 <!--The most janky way of doing this-->
 </div>
+<script>
+
+  const element = document.getElementById("home")
+  var f = element.innerWidth
+  document.getElementById("huh").innerHTML = string(f)
+  
+  </script>
