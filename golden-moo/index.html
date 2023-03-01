@@ -21,22 +21,30 @@ display: normal;
 font-family: "Noto Sans", sans-serif;
 font-weight: 0;
 padding: 0px 0px;
-
+--fonts:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* Create three unequal columns that floats next to each other */
 .column {
   float: left;
-  padding: 10px;
+  height: 100vh;
+  background-color: dimgray;
+  margin: 0;
+  /* position: absolute;
+  top: 0; 
+  padding-top: 52.5vh; */
+  z-index: -1;
 }
 
 /* Left and right column */
 .column.side {
   width: 25%;
+  border-radius: 0 0 0 15px;
 }
 
 /* Middle column */
 .column.middle {
+  border-radius: 0 0 15px 0;
   width: 75%;
 }
 
@@ -45,6 +53,9 @@ padding: 0px 0px;
   content: "";
   display: table;
   clear: both;
+}
+.row{
+  padding: 0 !important;
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
@@ -65,10 +76,15 @@ h2 {
   font-size: 200%;
   background-color: #fff;
   border-bottom: 3px solid rgb(0, 0, 0);
-  /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  Ugly
-  */
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: var(--fonts);
+
+}
+h4 {
+
+  font-size: 112.5%;
+  color:#fff;
+  font-family: var(--fonts);
+  font-weight: normal;
 
 }
 .img1 {
@@ -83,12 +99,26 @@ h2 {
   padding-right: 12px;
 
 }
+ul {
+  list-style-type: none;
+}
+li p {
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+#devico {
+  height: 1.45em;
+  width: 1.45em;
+  position: relative;
+  top:5px;
+  margin-right: 2px;
+}
     </style>
 </head>
 <body>                                  <!--Top-->
  <header>
     <a href="#" class="logo">
-        <img src="Logo.png" alt="logo">
+        <img src="..\tile.png" alt="logo">
     </a>
     <div class="spacer"></div>
 <!--
@@ -114,17 +144,25 @@ h2 {
     
     <div class="img1">WIP</div>
     
-    <iframe src="GoldenMoo sandbox.html" width="640" height="360" title="scratch"></iframe>
-    <p id="huh">huh?</p>
+    <iframe src="GoldenMoo sandbox.html" width="100%" height="360" title="scratch"></iframe>
 <div class="row">
     <div class="column side">
-        <h1>Authors</h1>
-        <p>Desc ig</p>
-        <!--Wery crappy way of doing this-->
+        <h1 style="margin-bottom:2px;">Authors</h1>
+        <ul>
+          <li>
+            <h4>Developers</h4>
+          </li>
+          <li>
+            <p><img src="https://images-ext-1.discordapp.net/external/RBVZd_Bo0zxcdxM1bmyfTBvlasQBsTvA2jBGW6VghXE/https/cdn.discordapp.com/avatars/750565290009559112/254ecaf23a0001320ed507c0f69bc259.png" id="devico">WlodekM</p>
+          </li>
+          <li>
+            <p><img src="https://images-ext-2.discordapp.net/external/GFmAX09Z7PBUrgYELwofNf17eENMUMC8xkXyUJFSVYc/https/cdn.discordapp.com/avatars/882182465270198333/f591abae58b36dbebde5e65a50a7432c.png" id="devico">Shreder95ua</p>
+          </li>
+        </ul>
     </div>
     
     <div class="column middle">
-      <h1>Main Content</h1>
+      <h1 style="margin-bottom:2px;">Main Content</h1>
       <p>Game desc idk</p>
     </div>
     <!--
@@ -135,10 +173,8 @@ h2 {
     </div>-->
   </div>
     
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+<br><br>
 </div> 
-<br><br><br><br>
 <!--The most janky way of doing this-->
 </div>
 
@@ -150,3 +186,8 @@ h2 {
   
   </script>
 </html>
+<center>
+  <p>Home</p>
+</center>
+<br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
