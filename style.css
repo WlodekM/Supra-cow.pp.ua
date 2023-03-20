@@ -1,14 +1,24 @@
 body{padding:0;margin:0;}
 :root {
-    --bg-main:     #000000;
-    --bg-middle:   #262626;
-    --text-color:  #fdfdfd;
+    --bg-main:     #030303fe; /*url(https://placekitten.com/693/423)*/
+    --bg-middle:   #262626ff;
+    --text-color:  #fdfdfdff;
     --link-color:  #ffffff80;
+
+
+    background:
+           /* top, transparent black, faked with gradient */ 
+           linear-gradient(
+             rgba(0, 0, 0, 0.7), 
+             rgba(0, 0, 0, 0.7)
+           ),
+           /* bottom, image */
+           var(--bg-main);
+    background-repeat: no-repeat;background-size: cover;background-position-x: center;
 }
 
 .main{
     --lr-margin: 15vw;
-    background-color: var(--bg-main);
     min-height: calc(100vh - (15px * 2));
     color: var(--text-color);
     display: flex;
@@ -60,7 +70,6 @@ body{padding:0;margin:0;}
 }
 
 .bottom-links{
-    background-color: var(--bg-main);
     padding: 15px;
     padding-bottom: 30px;
 }
@@ -76,11 +85,11 @@ body{padding:0;margin:0;}
 }
 
 header {
-    background-color: var(--bg-main);
     display: flex;
     justify-content: space-evenly;
     padding: 7.5px;
     background-color: var(--bg-middle);
+    font-size: larger;
 }
 
 header a{
@@ -91,4 +100,13 @@ header a{
 header a:hover{
     color: var(--link-color);
     text-decoration: underline;
+}
+
+header img{
+    position: absolute;
+    top: 0;
+    left:0;
+    object-fit: cover;
+    height: calc(1em + 18px);
+    width: 75px;
 }
