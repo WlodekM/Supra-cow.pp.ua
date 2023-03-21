@@ -39,6 +39,10 @@ body{padding:0;margin:0;}
     background-attachment: fixed;
 }
 
+a:hover{
+    cursor: pointer;
+}
+
 .main{
     --lr-margin: 15vw;
     min-height: calc(100vh - (15px * 2));
@@ -46,6 +50,7 @@ body{padding:0;margin:0;}
     display: flex;
     justify-content: center;
     padding: 15px var(--lr-margin) 15px var(--lr-margin);
+    padding-top: calc(30px);
 }
 
 .collum-middle {
@@ -96,12 +101,32 @@ body{padding:0;margin:0;}
     padding-bottom: 30px;
 }
 
-header {
+header div{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+}
+
+header {
+    position: sticky;
+    height: 30px;
+    display: flex;
     padding: 7.5px;
+    padding-inline: 0;
     background-color: var(--bg-middle);
     font-size: larger;
+    align-items: center;
+}
+
+header a{
+    justify-content: space-evenly;
+    margin-inline: 25px;
+}
+
+header img{
+    justify-self: flex-start;
+    object-fit: cover;
+    height: calc(30px + (7.5px * 2));
+    width: calc(30px + (7.5px * 2));
 }
 
 a{
@@ -112,15 +137,6 @@ a{
 a:hover{
     color: var(--link-color);
     text-decoration: underline;
-}
-
-header img{
-    position: absolute;
-    top: 0;
-    left:0;
-    object-fit: cover;
-    height: calc(1em + 18px);
-    width: 75px;
 }
 
 .upload_list_widget .upload .button, .upload_list_widget .upload .preorder_spacer {
@@ -183,8 +199,6 @@ header img{
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
     width: 640px;
     height: 360px;
 }
