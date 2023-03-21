@@ -1,20 +1,42 @@
 body{padding:0;margin:0;}
+
+.wrapper {
+    --itchio_font_family: Ubuntu;
+    --itchio_bg_color: #000000;
+    --itchio_bg2_color: rgba(20, 11, 0, 0.8);
+    --itchio_bg2_sub: #2c2318;
+    --itchio_text_color: #fed8b3;
+    --itchio_link_color: #fb922b;
+    --itchio_border_color: #563409;
+    --itchio_button_color: #ffeddb;
+    --itchio_button_fg_color: #332f2b;
+    --itchio_button_shadow_color: transparent;
+    background-color: #000000;
+    background-image: url(https://img.itch.zone/aW1nLzExNjM2MjY3LmpwZw==/original/5u7URL.jpg);
+    background-repeat: repeat-y;
+    background-position: 0 0;
+    background-attachment: fixed;
+}
+
 :root {
-    --bg-main:     #030303fe; /*url(https://placekitten.com/693/423)*/
-    --bg-middle:   #262626ff;
-    --text-color:  #fdfdfdff;
-    --link-color:  #ffffff80;
+    --bg-main:     url(https://img.itch.zone/aW1nLzExNjM2MjY3LmpwZw==/original/5u7URL.jpg); /*url(https://placekitten.com/693/423)*/
+    --bg-middle:   #140b00cc;
+    --text-color:  #fed8b3ff;
+    --link-color:  #fb922bff;
 
 
     background:
            /* top, transparent black, faked with gradient */ 
-           linear-gradient(
+           /* linear-gradient(
              rgba(0, 0, 0, 0.7), 
              rgba(0, 0, 0, 0.7)
-           ),
+           ), */
            /* bottom, image */
            var(--bg-main);
     background-repeat: no-repeat;background-size: cover;background-position-x: center;
+    font-family: Ubuntu,Lato,LatoExtended,sans-serif;
+    background-position: 0 0;
+    background-attachment: fixed;
 }
 
 .main{
@@ -74,16 +96,6 @@ body{padding:0;margin:0;}
     padding-bottom: 30px;
 }
 
-.bottom-links a{
-    color: var(--link-color);
-    text-decoration: none;
-}
-
-.bottom-links a:hover{
-    color: var(--link-color);
-    text-decoration: underline;
-}
-
 header {
     display: flex;
     justify-content: space-evenly;
@@ -92,12 +104,12 @@ header {
     font-size: larger;
 }
 
-header a{
+a{
     color: var(--link-color);
     text-decoration: none;
 }
 
-header a:hover{
+a:hover{
     color: var(--link-color);
     text-decoration: underline;
 }
@@ -109,4 +121,70 @@ header img{
     object-fit: cover;
     height: calc(1em + 18px);
     width: 75px;
+}
+
+.upload_list_widget .upload .button, .upload_list_widget .upload .preorder_spacer {
+    margin-right: 15px;
+    min-width: 100px;
+}
+
+.collum-middle .button, .collum-middle .button:hover, .collum-middle .button:active {
+    background-color: #ffeddb;
+    color: #332f2b;
+    text-shadow: 0 1px 0px transparent;
+}
+
+.collum-middle .button {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: inset 0 0 1px rgba(255,255,255,0.21);
+    text-align: center;
+    line-height: 33px;
+    font-weight: bold;
+    height: 35px;
+}
+
+.upload_list_widget .upload {
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+}
+
+.upload_list_widget .upload .file_size {
+    opacity: .6;
+    white-space: nowrap;
+}
+
+.collum-middle h1, .collum-middle h2, .collum-middle h3, .collum-middle h4, .collum-middle h5, .collum-middle h6 {
+    font-family: inherit;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.game-iframe iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.game-iframe {
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 640px;
+    height: 360px;
 }
